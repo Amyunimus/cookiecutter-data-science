@@ -11,15 +11,16 @@ Project Organization
     ├── README.md          				<- The top-level README for developers using this project.
     ├── data                                                                    
     │   ├── external       				<- Data from third party sources.                   
-    │   ├── interim        				<- Intermediate data that has been transformed.     
-    │   ├── processed      				<- The final, canonical data sets for modeling.     
+    │   ├── interim        				<- Intermediate data that has been transformed or modified.     
+    │   ├── processed      				<- The final, canonical data sets for analyses.     
     │   └── raw            				<- The original, immutable data dump.               
     │                                                                           
     ├── notebooks          				<- Jupyter notebooks. Naming convention is a number (for ordering),
     │                      	  			 the creator's initials, and a short `-` delimited description, e.g.
     │                      	  			 `1.0-jqp-initial-data-exploration`.              
     │                                                                           
-    ├── support            				<- Data dictionaries, manuals, and all other explanatory materials.
+    ├── support            				<- Data dictionaries, manuals, and all other explanatory materials, 
+    │                                    including debriefing etc. from experiment. 
     │                                                                           
     ├── reports            				<- Generated analysis as HTML, PDF, LaTeX, etc.     
     │   └── figures        				<- Generated graphics and figures to be used in reporting
@@ -28,18 +29,17 @@ Project Organization
     │                      	   			generated with `pip freeze > requirements.txt`   
     │                                                                           
     └── code               				<- Source code for use in this project.            
-        ├── __init__.py    				<- Makes src a Python module                        
+        ├── __init__.py    				<- Makes `code` a Python module                        
     	│                                                                           
         ├── analyses       				<- Scripts to analyze the data                      
         │                                                                       
         ├── base        			   	<- Base python functions used to analyze the data   
-        │   ├── __init__.py
-	    │   ├── formatting_basics.py    <- Data from third party sources.
-	    │   ├── plotting_basics.py      <- Intermediate data that has been transformed.
-	    │   └── statistics_basics.py    <- The original, immutable data dump.
+        │   ├── __init__.py				<- Makes `base` a Python module   
+	    │   ├── formatting_basics.py    <- Functions to format data for plotting or for statistics
+	    │   ├── plotting_basics.py      <- Functions to plot data
+	    │   └── statistics_basics.py    <- Functions for basic statistical analyses
         │
         ├── data       					<- Scripts to format and transform raw data
-        │   └── make_dataset.py
         │
         ├── presentation         		<- Scripts generate experimental trials and present the experiment
         │   ├── present_experiment.py	<- Experiment presentation script
